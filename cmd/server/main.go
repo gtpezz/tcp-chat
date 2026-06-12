@@ -170,7 +170,7 @@ func handleCommand(text string, client *internal.Client, server *internal.Server
 				time.Now().Format("15:04:05"), oldName, newName)
 		}
 
-	case strings.HasPrefix(text, "/msg "):
+	case strings.HasPrefix(text, "/msg"):
 		parts := strings.SplitN(text, " ", 3)
 		if len(parts) < 3 {
 			client.Send <- "Использование: /msg <пользователь> <сообщение>"
